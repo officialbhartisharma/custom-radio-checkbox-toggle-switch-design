@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+.first_sect_inn {
+    padding: 70px 0;
+    text-align: center;
+}
+/* Custom Checkbox CSS */
+.custcheckwrp input {
+    display: none;
+}
+.custcheckwrp .tickmark img {
+	display: none;
+}
+.custcheckwrp input:checked ~ .tickmark img {
+    display: inline-block;
+    vertical-align: middle;
+}
+.tickmark {
+    display: inline-block;
+    background-color: #000;
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
+    vertical-align: top;
+    text-align: center;
+    line-height: 11px;
+}
+.tickmark img {
+	width: 13px;
+	margin: 0 auto;
+}
+/* End of checkbox css */
+.custradiowrp {
+    margin: 40px 0;
+}
+.custradiowrp input {
+    display: none;
+}
+.custradiowrp label {
+	margin: 20px;
+}
+.custradiowrp .radiomark {
+    background-color: #000;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: top;
+    margin-right: 1px;
+}
+.custradiowrp .radiomark::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: none;
+    margin: 0 auto;
+}
+.custradiowrp input:checked ~ .radiomark::before {
+	display: block;
+}
+.switchlabel {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+.switchlabel input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switslider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.switslider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.switchlabel input:checked + .switslider {
+  background-color: #000;
+}
+.switchlabel input:checked + .switslider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.switchlabel.roundswitchlabel .switslider, .switchlabel.roundswitchlabel .switslider::before {
+    border-radius: 20px;
+}
+.switchlabel.roundswitchlabel {
+    margin-left: 30px;
+}
